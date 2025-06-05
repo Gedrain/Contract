@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Хартия Взаимного Действия и Ответственности</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <style>
+    /* Общие настройки */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: linear-gradient(135deg, #0d001a, #1e0a3c); 
+      color: white;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Приветствие */
+    .intro {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 10;
+      animation: fadeOut 4s forwards;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      color: #c08fff;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      color: #c0a0ff;
+    }
+
+    /* Основной контейнер */
+    .container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(173, 105, 255, 0.2);
+      box-shadow: 0 0 20px rgba(173, 105, 255, 0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 4.2s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1.title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 2rem;
+      background: linear-gradient(to right, #c08fff, #7d4cdf);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #d881ff;
+      position: relative;
+      padding-left: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.3rem;
+      height: 1.2rem;
+      width: 4px;
+      background: linear-gradient(to bottom, #c08fff, #7d4cdf);
+    }
+
+    .article {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #c08fff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #c08fff44;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUpArticle 0.6s ease-out forwards;
+    }
+
+    .article:nth-child(1) { animation-delay: 4.4s; }
+    .article:nth-child(2) { animation-delay: 4.6s; }
+    .article:nth-child(3) { animation-delay: 4.8s; }
+    .article:nth-child(4) { animation-delay: 5.0s; }
+    .article:nth-child(5) { animation-delay: 5.2s; }
+    .article:nth-child(6) { animation-delay: 5.4s; }
+
+    @keyframes fadeInUpArticle {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .article:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 20px #c08fffaa;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .signature-line {
+      width: 48%;
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px dashed #c08fff;
+      padding-top: 0.5rem;
+      color: #c08fff;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .signatures {
+        flex-direction: column;
+        align-items: center;
+      }
+      .signature-line {
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Приветствие -->
+  <div class="intro">
+    <div>
+      <h1>Добро пожаловать</h1>
+      <p>Вы вошли в Хартию Взаимного Действия и Ответственности.</p>
+      <p>Ознакомьтесь с условиями внимательно.</p>
+    </div>
+  </div>
+
+  <!-- Основной контент -->
+  <div class="container">
+    <h1 class="title">Хартия Взаимного Действия и Ответственности</h1>
+
+    <p><strong>Настоящий документ заключён между:</strong></p>
+    <ul>
+      <li><strong>Патроном</strong> — лицом, действующим добровольно и имеющим право вступать в обязательства;</li>
+      <li><strong>Исполнителем Архой</strong>, далее именуемой <em>Исполнителем</em>.</li>
+    </ul>
+
+    <!-- Статья I -->
+    <div class="article">
+      <h2>Статья I — Обязательство Деяния</h2>
+      <p><strong>1.1.</strong> Исполнитель принимает задание от Патрона, связанное с вопросами, которые обе стороны понимают между собой, но которые не подлежат подробному изложению в данном документе.</p>
+      <p><strong>1.2.</strong> Исполнитель обязуется приступить к выполнению поручения в срок, который посчитает подходящим, исходя из собственного понимания ситуации, и завершить его в рамках того времени, которое можно считать разумным с точки зрения естественного хода событий.</p>
+    </div>
+
+    <!-- Статья II -->
+    <div class="article">
+      <h2>Статья II — Ограничение Вмешательства</h2>
+      <p><strong>2.1.</strong> Патрон, равно как и все лица, связанные с ним родством, дружбой, долгом или влиянием, воздерживаются от любого личного контакта, наблюдения, воздействия или попыток взаимодействия с Исполнителем, напрямую или через третьих лиц.</p>
+      <p><strong>2.2.</strong> Любое нарушение этого правила автоматически вызывает ответное действие, соответствующее силе и характеру вмешательства.</p>
+    </div>
+
+    <!-- Статья III -->
+    <div class="article">
+      <h2>Статья III — Лица Под Защитой</h2>
+      <p><strong>3.1.</strong> Исполнитель имеет право включить в соглашение любое число лиц или существ, которых она признаёт достойными своей защиты. Перечень этих лиц:</p>
+      <ul>
+        <li>остаётся секретным;</li>
+        <li>не подлежит раскрытию до подписания;</li>
+        <li>не может быть изменён ни при каких условиях после заключения договора.</li>
+      </ul>
+      <p><strong>3.2.</strong> Если кому-либо из указанных лиц будет нанесён вред, даже случайно и без осознания их связи с Исполнителем, это рассматривается как покушение на саму Исполнительницу и активирует положения Статьи II.</p>
+    </div>
+
+    <!-- Статья IV -->
+    <div class="article">
+      <h2>Статья IV — Вознаграждение</h2>
+      <p><strong>4.1.</strong> Патрон обязуется предоставить Исполнителю вознаграждение, форма, размер и момент получения которого определяются исключительно он, но от которого может отказаться сам Исполнитель.</p>
+    </div>
+
+    <!-- Статья V -->
+    <div class="article">
+      <h2>Статья V — Трактовка Условий</h2>
+      <p><strong>5.1.</strong> Все положения настоящего документа трактуются исключительно по усмотрению Исполнителя.</p>
+      <p><strong>5.2.</strong> Любые попытки Патрона или третьих лиц интерпретировать текст иначе будут считаться нарушением соглашения.</p>
+    </div>
+
+    <!-- Статья VI -->
+    <div class="article">
+      <h2>Статья VI — Длительность и Неразрывность</h2>
+      <p><strong>6.1.</strong> Соглашение вступает в силу с момента проставления печати Исполнителя и остаётся в силе до тех пор, пока Исполнитель не признает выполнение цели завершённым.</p>
+      <p><strong>6.2.</strong> Договор не может быть расторгнут, изменён, аннулирован или пересмотрен ни при каких обстоятельствах. Любая попытка такого действия будет считаться нарушением Статьи II и IV.</p>
+    </div>
+
+    <!-- Подписи -->
+    <div class="signatures">
+      <div class="signature-line">Исполнитель: Арха</div>
+      <div class="signature-line">Патрон: ___________________________</div>
+    </div>
+
+    <footer>
+      Представитель клана Хак-Шурц.<br>
+      &copy; Все права защищены магическим образом.
+    </footer>
+  </div>
+
+</body>
+</html>
